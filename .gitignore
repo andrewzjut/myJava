@@ -4,8 +4,8 @@ logs/
 tmp/
 *.tmp
 *.bak
-
-target/
+sdk/
+/target
 
 .mvn/
 mvnw
