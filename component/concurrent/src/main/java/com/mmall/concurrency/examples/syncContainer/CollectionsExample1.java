@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
- * 常见线程不安全的Collections
+ * 常见线程安全的Collections
  */
 @Slf4j
 @ThreadSafe
@@ -55,8 +55,6 @@ public class CollectionsExample1 {
         log.info("synchronizedList:{}", synchronizedList.size());
         log.info("synchronizedSet:{}", synchronizedSet.size());
         log.info("synchronizedMap:{}", synchronizedMap.size());
-
-
     }
 
     private static void update(int i) {

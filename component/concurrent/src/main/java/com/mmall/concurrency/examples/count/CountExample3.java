@@ -1,5 +1,6 @@
 package com.mmall.concurrency.examples.count;
 
+import com.mmall.concurrency.annotations.NotThreadSafe;
 import com.mmall.concurrency.annotations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -14,7 +15,7 @@ import java.util.concurrent.Semaphore;
  * 演示并发   volatile关键字 不能保证线程安全
  */
 @Slf4j
-@ThreadSafe
+@NotThreadSafe
 public class CountExample3 {
 
     //请求总数

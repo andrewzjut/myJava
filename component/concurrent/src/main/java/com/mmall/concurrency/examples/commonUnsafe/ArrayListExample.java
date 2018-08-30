@@ -52,8 +52,6 @@ public class ArrayListExample {
         log.info("arrayList:{}", arrayList.size());
         log.info("hashSet:{}", hashSet.size());
         log.info("hashMap:{}", hashMap.size());
-
-
     }
 
     private static void update(int i) {

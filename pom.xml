@@ -51,6 +51,11 @@
             <artifactId>zookeeper</artifactId>
             <version>3.4.10</version>
         </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>2.3.3</version>
+        </dependency>
     </dependencies>
 
 

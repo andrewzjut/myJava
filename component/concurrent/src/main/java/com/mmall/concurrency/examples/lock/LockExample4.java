@@ -13,25 +13,25 @@ public class LockExample4 {
         new Thread(()->{
             try {
                 reentrantLock.lock();
-                log.info("wait signal"); //1
+                log.info("1 wait signal"); //1
                 condition.await();
             }catch (Exception e){
                 e.printStackTrace();
             }
-            log.info("get signal"); // 4
+            log.info("1 get signal"); // 4
             reentrantLock.unlock();
         }).start();
 
         new Thread(()->{
             reentrantLock.lock();
-            log.info("get lock"); // 2
+            log.info("2 get lock"); // 2
             try {
                 Thread.sleep(3000);
             }catch (Exception e){
                 e.printStackTrace();
             }
             condition.signalAll();
-            log.info("send signal");// 3
+            log.info("2 send signal");// 3
             reentrantLock.unlock();
         }).start();
     }

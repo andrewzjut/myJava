@@ -20,7 +20,7 @@ public class RedisUtils {
         }
     }
 
-    public static JedisPool getPool(Map<String, String> props) {
+    private static JedisPool getPool(Map<String, String> props) {
         if (pool == null) {
             JedisPoolConfig config = new JedisPoolConfig();
             config.setMaxTotal(500);
@@ -29,8 +29,8 @@ public class RedisUtils {
             // 在borrow一个jedis实例时，是否提前进行validate操作；如果为true，则得到的jedis实例均是可用的；
             config.setTestOnBorrow(true);
             // GenericObjectPoolConfig config = new GenericObjectPoolConfig();
-            pool = new JedisPool(config, "10.200.150.8",
-                    6868,
+            pool = new JedisPool(config, "localhost",
+                    6379,
                     2000
             );
         }

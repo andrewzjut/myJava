@@ -15,12 +15,13 @@ public class CopyOnWriteArraySetExample {
     private static int clientTotal = 5000;
     //并发数
     private static int threadTotal = 200;
-    //线程不安全
+    //线程安全
     private static CopyOnWriteArraySet<Integer> copyOnWriteArraySet = new CopyOnWriteArraySet<>();
 
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
+
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
         for (int i = 0; i < clientTotal; i++) {

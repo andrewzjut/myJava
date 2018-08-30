@@ -15,7 +15,7 @@ public class CopyOnWriteArrayListExample {
     private static int clientTotal = 5000;
     //并发数
     private static int threadTotal = 200;
-    //线程不安全
+    //线程安全
     private static CopyOnWriteArrayList<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
 
 

@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
- * 常见线程不安全的Collections
+ * 常见线程安全的Collections
  */
 @Slf4j
 @ThreadSafe
@@ -20,7 +20,7 @@ public class HashTableExample {
     private static int clientTotal = 5000;
     //并发数
     private static int threadTotal = 200;
-    //线程不安全
+    //线程安全
     private static Map<Integer,Integer> hashtable = new Hashtable<>();
 
     public static void main(String[] args) throws Exception {
