@@ -25,7 +25,6 @@ out/
 .apt_generated
 .factorypath
 .springBeans
-*.iml
 metastore_db/
 /spark-warehouse/
 .DS_Store
