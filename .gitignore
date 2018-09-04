@@ -18,14 +18,14 @@ out/
 *.iws
 *.iml
 *.ipr
-
+.DS_Store
 .settings/
 .classpath
 .project
 .apt_generated
 .factorypath
 .springBeans
-
+*.iml
 metastore_db/
 /spark-warehouse/
 .DS_Store
